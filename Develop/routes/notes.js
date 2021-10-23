@@ -17,7 +17,7 @@ notes.post('/', (req, res) => {
         {
             title,
             text,
-            notes_id: uuid(),
+            id: uuid(),
         };
 
         readAndAppend(newNotes, './db/db.json');
@@ -26,6 +26,8 @@ notes.post('/', (req, res) => {
             status: 'success',
             body: newNotes,
         };
+
+        readFromFile('./db/db.json').then ((data) => res.json(JSON.parse(data)))
 
         res.json(response);
     } else {
