@@ -1,4 +1,4 @@
-# Homework-11-Note-Taker
+# Note-Taker
 
 ## Description
 This is a note taking application that uses Express.js in the back end and will save and retrieve note data from a JSON file. 
